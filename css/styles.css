@@ -1,0 +1,292 @@
+*, body, h1, h2, h3, h4, h5, h6, p, span, a {
+    font-family: 'Roboto', sans-serif;
+}
+.page-title {
+    margin: 20px 0;
+    font-weight: 900;
+}
+.sec-image {
+    width: 100%;
+}
+header nav.navbar {
+    padding: 20px;
+    position: sticky;
+}
+
+header nav ul.navbar-nav {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav li {
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+.section {
+    display: none;
+    transition: .3s;
+    max-width: 95%;
+    padding: 0 25px;
+    margin: 20px auto;
+}
+.row > div {
+    padding: 10px;
+}
+.section.active {
+    display: block;
+}
+
+.logo {
+    font-weight: 900;
+}
+@media (min-width: 992px){
+    .navbar-expand-lg {
+        flex-direction: column ;
+    }
+}
+
+@media (max-width: 992px){
+    .logo {
+        font-size: 1.5rem;
+    }
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+}
+footer p {
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+}
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+.thumbnail {
+    margin-bottom: 20px;
+}
+.thumbnail img{
+    transition: .3s;
+    height: 100%;
+    object-fit: cover;
+}
+.thumbnail img:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.gallery {
+    position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+.mySlides img {
+    height: 500px;
+    object-fit: contain;
+    background-color: #000;
+}
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+    cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next, .play {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: .3s;
+}
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.play {
+    right: 48%;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+@media (max-width: 992px){
+    .play {
+        right: 40%;
+    }
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover, .play:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff !important;
+}
+.play:hover {
+    border: 2px solid #fff;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+.caption-container p {
+    margin: 10px 0;
+}
+.gallery .row {
+    margin: 0;
+}
+.gallery .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Six columns side by side */
+/* .gallery .column {
+    float: left;
+    width: 16.66%;
+} */
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+    opacity: 0.6;
+}
+
+.gallery .active,
+.demo:hover {
+    opacity: 1;
+}
+
+
+/* --------------------------------------------------------------------- */
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+#myImg:hover {opacity: 0.7;}
+  
+
+#vid-frame{
+    width: 90%;
+    margin: auto;
+    display: block;
+    height: 70vh;
+}
+  /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+  
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+  
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation - Zoom in the Modal */
+  .modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+  
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+  
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+  /* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+}
+

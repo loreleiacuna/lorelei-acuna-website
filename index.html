@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Lorelei Acuña</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/styles.css?v=2" />
+    </head>
+    <body>
+        
+        <div style="display: flex; flex-direction: column; min-height: 100vh;">
+            <header>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <h1 class="logo">Lorelei Acuña</h1>
+    
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active" id="films-link">
+                          <a class="nav-link" onclick="setSection('films')">Films</a>
+                        </li>
+                        <li class="nav-item" id="music-videos-link">
+                          <a class="nav-link" onclick="setSection('music-videos')">Music Videos</a>
+                        </li>
+                        <li class="nav-item" id="contact-link">
+                          <a class="nav-link" onclick="setSection('contact')">Contact</a>
+                        </li>
+                        <li class="nav-item" id="about-link">
+                          <a class="nav-link" onclick="setSection('about')">About</a>
+                        </li>
+                      </ul>
+                    </div>
+                </nav>
+            </header>
+    
+            <div style="flex: 1;">
+                <section class="section active" id="films">
+                    <h3 class="page-title">Experimental Art Films</h3>
+    
+                    <!-- Container for the image gallery -->
+                    <div class="gallery">
+                        <!-- Full-width images with number text -->
+                        <div class="mySlides mySlides1">
+                            <div class="numbertext">1 / 6</div>
+                            <img src="https://img.youtube.com/vi/ZdW-bsn9oYg/hqdefault.jpg" style="width:100%">
+                        </div>
+                    
+                        <div class="mySlides mySlides1">
+                        <div class="numbertext">2 / 6</div>
+                            <img src="https://img.youtube.com/vi/C2JIJOJfk0U/hqdefault.jpg" style="width:100%">
+                        </div>
+                    
+                        <div class="mySlides mySlides1">
+                        <div class="numbertext">3 / 6</div>
+                            <img src="https://img.youtube.com/vi/u5e6CnF_qv0/hqdefault.jpg" style="width:100%">
+                        </div>
+                    
+                        <div class="mySlides mySlides1">
+                            <div class="numbertext">4 / 6</div>
+                            <img src="https://img.youtube.com/vi/ygy620c-Tm0/hqdefault.jpg" style="width:100%">
+                        </div>
+                    
+                        <div class="mySlides mySlides1">
+                            <div class="numbertext">5 / 6</div>
+                            <img src="https://img.youtube.com/vi/dN8k7qZc7eY/hqdefault.jpg" style="width:100%">
+                        </div>
+                    
+                        <div class="mySlides mySlides1">
+                            <div class="numbertext">6 / 6</div>
+                            <img src="https://img.youtube.com/vi/iNqfjNZCsAI/hqdefault.jpg" style="width:100%">
+                        </div>
+                    
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1, '1')">&#10094;</a>
+                        <a class="play" onclick="playVideo(1)">&#9654;</a>
+                        <a class="next" onclick="plusSlides(1, '1')">&#10095;</a>
+                    
+                        <!-- Image text -->
+                        <div class="caption-container">
+                            <p id="caption1"></p>
+                        </div>
+                    
+                        <!-- Thumbnail images -->
+                        <div class="row thumbnail">
+                            <div class="col-2 col-sm-2 col-md-2">
+                                <img class="demo demo1 cursor" src="https://img.youtube.com/vi/ZdW-bsn9oYg/hqdefault.jpg" style="width:100%" onclick="currentSlide(1, '1')" alt="Empathetic Touch">
+                            </div>
+                            <div class="col-2 col-sm-2 col-md-2">
+                                <img class="demo demo1 cursor" src="https://img.youtube.com/vi/C2JIJOJfk0U/hqdefault.jpg" style="width:100%" onclick="currentSlide(2, '1')" alt="Yo No Soy Este Cuerpo">
+                            </div>
+                            <div class="col-2 col-sm-2 col-md-2">
+                                <img class="demo demo1 cursor" src="https://img.youtube.com/vi/u5e6CnF_qv0/hqdefault.jpg" style="width:100%" onclick="currentSlide(3, '1')" alt="Water In My Lungs">
+                            </div>
+                            <div class="col-2 col-sm-2 col-md-2">
+                                <img class="demo demo1 cursor" src="https://img.youtube.com/vi/ygy620c-Tm0/hqdefault.jpg" style="width:100%" onclick="currentSlide(4, '1')" alt="What If?">
+                            </div>
+                            <div class="col-2 col-sm-2 col-md-2">
+                                <img class="demo demo1 cursor" src="https://img.youtube.com/vi/dN8k7qZc7eY/hqdefault.jpg" style="width:100%" onclick="currentSlide(5, '1')" alt="The Butterfly People">
+                            </div>
+                            <div class="col-2 col-sm-2 col-md-2">
+                                <img class="demo demo1 cursor" src="https://img.youtube.com/vi/iNqfjNZCsAI/hqdefault.jpg" style="width:100%" onclick="currentSlide(6, '1')" alt="Ritual in Film (dir. by @loreleiacuna)">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- https://drive.google.com/file/d/1YRBW49U1RX63pStraw-Ru2F1FuPTOVWJ/view?usp=sharing -->
+    
+                </section>
+    
+                <section id="music-videos" class="section">
+                    <h3 class="page-title">Music Videos</h3>
+                    <div class="gallery">
+    
+                        <!-- Full-width images with number text -->
+                        <div class="mySlides mySlides2">
+                        <div class="numbertext">1 / 2</div>
+                            <img src="https://img.youtube.com/vi/44S-Kh4iLKI/hqdefault.jpg" style="width:100%">
+                        </div>
+                    
+                        <div class="mySlides mySlides2">
+                        <div class="numbertext">2 / 2</div>
+                            <img src="https://img.youtube.com/vi/BOJ2BHiAMD0/hqdefault.jpg" style="width:100%">
+                        </div>
+                    
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1, '2')">&#10094;</a>
+                        <a class="play" onclick="playVideo(2)">&#9654;</a>
+                        <a class="next" onclick="plusSlides(1, '2')">&#10095;</a>
+                    
+                        <!-- Image text -->
+                        <div class="caption-container">
+                            <p id="caption2"></p>
+                        </div>
+                    
+                        <!-- Thumbnail images -->
+                        <div class="row thumbnail">
+                            <div class="col-2 col-sm-2 col-md-2">
+                                <img class="demo demo2 cursor" src="https://img.youtube.com/vi/44S-Kh4iLKI/hqdefault.jpg" style="width:100%" onclick="currentSlide(1, '2')" alt="SwavvyTheReaper - No Hook PT.1 (Prod by: Tommy Zahh)">
+                            </div>
+                            <div class="col-2 col-sm-2 col-md-2">
+                                <img class="demo demo2 cursor" src="https://img.youtube.com/vi/BOJ2BHiAMD0/hqdefault.jpg" style="width:100%" onclick="currentSlide(2, '2')" alt="Anacarina - NUMB (Dir. by Lorelei Acuña)">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </section>
+    
+                <section id="contact" class="section">
+                    <h3 class="page-title">Contact</h3>
+                    <div class="row contact" style="align-items: center;">
+                        <div class="col-xs-12 col-md-6" >
+                            <img class="sec-image" src="./images/contact.jpg" />
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <p>Instagram : <a href="https://instagram.com/loreleiacuna" target="_blank">@loreleiacuna</a></p>
+                            <p>Email : <a href="mailto:loreleiacua@alum.calarts.edu">loreleiacua@alum.calarts.edu</a></p>
+                        </div>
+                    </div>
+                    
+                </section>
+    
+                <section id="about" class="section">
+                    <div class="row" style="align-items: center;">
+                        <div class="col-xs-12 col-md-6">
+                            <h3 class="page-title">About</h3>
+                            Lorelei Acuña studied film and video at California Institute of the Arts, graduating class 2022. Her films invoke a sense of spirituality, and feeling intouch with the elements and energies around us. She has done freelance work with many independent artists in Los Angeles, and her hometown, Houston.
+                            Currently Lorelei is pursuing her career as a fashion designer for an eco-concious, upcycled clothing brand - Lorelita Designs.
+                        </div>
+                        <div class="col-xs-12 col-md-6" >
+                            <img class="sec-image" src="./images/about.jpg" />
+                        </div>
+                    </div>
+                </section>
+    
+            </div>
+    
+            <footer>
+                <p>&copy;<script> document.write(new Date().getFullYear())</script> Experimental Art Films</p>
+            </footer>
+        </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- The Close Button -->
+            <span class="close" id="close">&times;</span>
+
+            <!-- Modal Content (The Image) -->
+
+            <iframe id="vid-frame" src="" title="YouTube video player" autoplay frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex, '1');
+            showSlides(slideIndex, '2');
+            
+            // Next/previous controls
+            function plusSlides(n, type) {
+                showSlides(slideIndex += n, type);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n, type) {
+                showSlides(slideIndex = n, type);
+            }
+
+            function showSlides(n, type) {
+                var i;
+                var slides = document.getElementsByClassName(`mySlides${type}`);
+                var dots = document.getElementsByClassName(`demo${type}`);
+                var captionText = document.getElementById(`caption${type}`);
+
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+                captionText.innerHTML = dots[slideIndex-1].alt;
+            }
+
+            function setSection(section) {
+                const links = ['films', 'music-videos', 'contact', 'about']
+
+                links.forEach((link) => {
+                    if(link === section ) {
+                        document.getElementById(link).classList.add('active') 
+                        document.getElementById(`${link}-link`).classList.add('active') 
+                    } else {
+                        document.getElementById(link).classList.remove('active')
+                        document.getElementById(`${link}-link`).classList.remove('active') 
+                    }
+                })
+            }
+        
+        
+            function playVideo(type) {
+                var videoLinks = ['ZdW-bsn9oYg', 'C2JIJOJfk0U', 'u5e6CnF_qv0', 'ygy620c-Tm0', 'dN8k7qZc7eY', 'iNqfjNZCsAI', '44S-Kh4iLKI', 'BOJ2BHiAMD0']
+                // Get the modal
+
+                var index = (type > 1) ? slideIndex+6 : slideIndex
+
+                var modal = document.getElementById("myModal");
+
+                // Get the image and insert it inside the modal - use its "alt" text as a caption
+                // var img = document.getElementById("myImg");
+                var modalVid = document.getElementById("vid-frame");
+                var captionText = document.getElementById("caption");
+ 
+                modal.style.display = "block";
+                console.log(index, videoLinks[index - 1])
+                modalVid.src = `https://www.youtube.com/embed/${videoLinks[index - 1]}?autoplay=1`;
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementById("close");
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() {
+                    modal.style.display = "none";
+                    modalVid.src=""
+                }
+            }
+
+            function getImage() {
+                console.log('called')
+            }
+        </script>
+    </body>
+</html>
