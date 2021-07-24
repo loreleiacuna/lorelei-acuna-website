@@ -12,6 +12,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="./css/styles.css?v=2" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./data.js?v=2"></script>
     </head>
     <body>
         
@@ -50,34 +52,7 @@
                     <!-- Container for the image gallery -->
                     <div class="gallery">
                         <!-- Full-width images with number text -->
-                        <div class="mySlides mySlides1">
-                            <div class="numbertext">1 / 6</div>
-                            <img src="https://img.youtube.com/vi/ZdW-bsn9oYg/hqdefault.jpg" style="width:100%">
-                        </div>
-                    
-                        <div class="mySlides mySlides1">
-                        <div class="numbertext">2 / 6</div>
-                            <img src="https://img.youtube.com/vi/C2JIJOJfk0U/hqdefault.jpg" style="width:100%">
-                        </div>
-                    
-                        <div class="mySlides mySlides1">
-                        <div class="numbertext">3 / 6</div>
-                            <img src="https://img.youtube.com/vi/u5e6CnF_qv0/hqdefault.jpg" style="width:100%">
-                        </div>
-                    
-                        <div class="mySlides mySlides1">
-                            <div class="numbertext">4 / 6</div>
-                            <img src="https://img.youtube.com/vi/ygy620c-Tm0/hqdefault.jpg" style="width:100%">
-                        </div>
-                    
-                        <div class="mySlides mySlides1">
-                            <div class="numbertext">5 / 6</div>
-                            <img src="https://img.youtube.com/vi/dN8k7qZc7eY/hqdefault.jpg" style="width:100%">
-                        </div>
-                    
-                        <div class="mySlides mySlides1">
-                            <div class="numbertext">6 / 6</div>
-                            <img src="https://img.youtube.com/vi/iNqfjNZCsAI/hqdefault.jpg" style="width:100%">
+                        <div id="film-slides">
                         </div>
                     
                         <!-- Next and previous buttons -->
@@ -91,25 +66,7 @@
                         </div>
                     
                         <!-- Thumbnail images -->
-                        <div class="row thumbnail">
-                            <div class="col-2 col-sm-2 col-md-2">
-                                <img class="demo demo1 cursor" src="https://img.youtube.com/vi/ZdW-bsn9oYg/hqdefault.jpg" style="width:100%" onclick="currentSlide(1, '1')" alt="Empathetic Touch">
-                            </div>
-                            <div class="col-2 col-sm-2 col-md-2">
-                                <img class="demo demo1 cursor" src="https://img.youtube.com/vi/C2JIJOJfk0U/hqdefault.jpg" style="width:100%" onclick="currentSlide(2, '1')" alt="Yo No Soy Este Cuerpo">
-                            </div>
-                            <div class="col-2 col-sm-2 col-md-2">
-                                <img class="demo demo1 cursor" src="https://img.youtube.com/vi/u5e6CnF_qv0/hqdefault.jpg" style="width:100%" onclick="currentSlide(3, '1')" alt="Water In My Lungs">
-                            </div>
-                            <div class="col-2 col-sm-2 col-md-2">
-                                <img class="demo demo1 cursor" src="https://img.youtube.com/vi/ygy620c-Tm0/hqdefault.jpg" style="width:100%" onclick="currentSlide(4, '1')" alt="What If?">
-                            </div>
-                            <div class="col-2 col-sm-2 col-md-2">
-                                <img class="demo demo1 cursor" src="https://img.youtube.com/vi/dN8k7qZc7eY/hqdefault.jpg" style="width:100%" onclick="currentSlide(5, '1')" alt="The Butterfly People">
-                            </div>
-                            <div class="col-2 col-sm-2 col-md-2">
-                                <img class="demo demo1 cursor" src="https://img.youtube.com/vi/iNqfjNZCsAI/hqdefault.jpg" style="width:100%" onclick="currentSlide(6, '1')" alt="Ritual in Film (dir. by @loreleiacuna)">
-                            </div>
+                        <div class="row thumbnail" id="film-thumbnails">
                         </div>
                     </div>
                     
@@ -121,16 +78,7 @@
                     <h3 class="page-title">Music Videos</h3>
                     <div class="gallery">
     
-                        <!-- Full-width images with number text -->
-                        <div class="mySlides mySlides2">
-                        <div class="numbertext">1 / 2</div>
-                            <img src="https://img.youtube.com/vi/44S-Kh4iLKI/hqdefault.jpg" style="width:100%">
-                        </div>
-                    
-                        <div class="mySlides mySlides2">
-                        <div class="numbertext">2 / 2</div>
-                            <img src="https://img.youtube.com/vi/BOJ2BHiAMD0/hqdefault.jpg" style="width:100%">
-                        </div>
+                        <div id="music-video-slides"></div>
                     
                         <!-- Next and previous buttons -->
                         <a class="prev" onclick="plusSlides(-1, '2')">&#10094;</a>
@@ -143,13 +91,7 @@
                         </div>
                     
                         <!-- Thumbnail images -->
-                        <div class="row thumbnail">
-                            <div class="col-2 col-sm-2 col-md-2">
-                                <img class="demo demo2 cursor" src="https://img.youtube.com/vi/44S-Kh4iLKI/hqdefault.jpg" style="width:100%" onclick="currentSlide(1, '2')" alt="SwavvyTheReaper - No Hook PT.1 (Prod by: Tommy Zahh)">
-                            </div>
-                            <div class="col-2 col-sm-2 col-md-2">
-                                <img class="demo demo2 cursor" src="https://img.youtube.com/vi/BOJ2BHiAMD0/hqdefault.jpg" style="width:100%" onclick="currentSlide(2, '2')" alt="Anacarina - NUMB (Dir. by Lorelei Acuña)">
-                            </div>
+                        <div class="row thumbnail" id="music-video-thumbnails">
                         </div>
                     </div>
                     
@@ -185,7 +127,7 @@
             </div>
     
             <footer>
-                <p>&copy;<script> document.write(new Date().getFullYear())</script> Experimental Art Films</p>
+                <p>&copy;<script> document.write(new Date().getFullYear())</script> Lorelei Acuña</p>
             </footer>
         </div>
 
@@ -204,7 +146,46 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         
+        
         <script>
+            films.forEach(({ name, link }, index) => {
+                $("#film-slides").append(
+                `
+                    <div class="mySlides mySlides1">
+                        <div class="numbertext">${index + 1} / ${films.length}</div>
+                        <img src="https://img.youtube.com/vi/${link}/hqdefault.jpg" style="width:100%">
+                    </div>
+                `
+                );
+                $("#film-thumbnails").append(
+                `
+                    <div class="col-3 col-sm-2 col-md-2">
+                        <img class="demo demo1 cursor" src="https://img.youtube.com/vi/${link}/hqdefault.jpg" style="width:100%" onclick="currentSlide(${index+1}, '1')" alt="${name}">
+                    </div>
+                `
+                );
+            })
+
+            musicVideos.forEach(({ name, link }, index) => {
+                $("#music-video-slides").append(
+                `
+                    <div class="mySlides mySlides2">
+                        <div class="numbertext">${index + 1} / ${films.length}</div>
+                        <img src="https://img.youtube.com/vi/${link}/hqdefault.jpg" style="width:100%">
+                    </div>
+                `
+                );
+                $("#music-video-thumbnails").append(
+                `
+                    <div class="col-3 col-sm-2 col-md-2">
+                        <img class="demo demo2 cursor" src="https://img.youtube.com/vi/${link}/hqdefault.jpg" style="width:100%" onclick="currentSlide(${index+1}, '2')" alt="${name}">
+                    </div>
+                `
+                );
+            })
+
+
+
             var slideIndex = 1;
             showSlides(slideIndex, '1');
             showSlides(slideIndex, '2');
@@ -254,21 +235,16 @@
         
         
             function playVideo(type) {
-                var videoLinks = ['ZdW-bsn9oYg', 'C2JIJOJfk0U', 'u5e6CnF_qv0', 'ygy620c-Tm0', 'dN8k7qZc7eY', 'iNqfjNZCsAI', '44S-Kh4iLKI', 'BOJ2BHiAMD0']
-                // Get the modal
 
-                var index = (type > 1) ? slideIndex+6 : slideIndex
+                var videos = (type > 1) ? musicVideos : films
 
                 var modal = document.getElementById("myModal");
-
-                // Get the image and insert it inside the modal - use its "alt" text as a caption
-                // var img = document.getElementById("myImg");
                 var modalVid = document.getElementById("vid-frame");
                 var captionText = document.getElementById("caption");
  
                 modal.style.display = "block";
-                console.log(index, videoLinks[index - 1])
-                modalVid.src = `https://www.youtube.com/embed/${videoLinks[index - 1]}?autoplay=1`;
+                console.log(slideIndex, videos[slideIndex - 1])
+                modalVid.src = `https://www.youtube.com/embed/${videos[slideIndex - 1].link}?autoplay=1`;
 
                 // Get the <span> element that closes the modal
                 var span = document.getElementById("close");
@@ -280,9 +256,6 @@
                 }
             }
 
-            function getImage() {
-                console.log('called')
-            }
         </script>
     </body>
 </html>
